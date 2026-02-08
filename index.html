@@ -295,12 +295,105 @@
     // ============================================
     
     const kanjiData = [
-        // --- Page 11 (New Additions) ---
+        // --- Page 11 (Nature/Elements) ---
         { char: "山", meaning: "mountain", readings: [{r:"yama", k:"やま", t:"kun"}, {r:"san", k:"サン", t:"on"}] },
-        { char: "川", meaning: "river", readings: [{r:"kawa", "k":"かわ", t:"kun"}, {r:"sen", "k":"セン", t:"on"}] },
+        { char: "川", meaning: "river", readings: [{r:"kawa", k:"かわ", t:"kun"}, {r:"sen", k:"セン", t:"on"}] },
         { char: "田", meaning: "rice field", readings: [{r:"ta", k:"た", t:"kun"}, {r:"den", k:"デン", t:"on"}] },
         { char: "日", meaning: "sun / day", readings: [{r:"hi", k:"ひ", t:"kun"}, {r:"bi", k:"び", t:"kun"}, {r:"ka", k:"か", t:"kun"}, {r:"nichi", k:"ニチ", t:"on"}, {r:"ni", k:"ニ", t:"on"}, {r:"jitsu", k:"ジツ", t:"on"}] },
-        { char: "月", meaning: "moon", readings: [{r:"tsuki", k:"つき", t:"kun"}, {r:"getsu", k:"ゲツ", t:"on"}, {r:"gatsu", k:"ガツ", t:"on"}] },
+        { char: "月", meaning: "Moon / Month", readings: [{r:"tsuki", k:"つき", t:"kun"}, {r:"getsu", k:"ゲツ", t:"on"}, {r:"gatsu", k:"ガツ", t:"on"}] },
+
+        // --- Numbers (No. 11-20) with Special Date Readings ---
+        { 
+            char: "一", 
+            meaning: "One\nEx: 一月 (Ichigatsu), 一日 (Tsuitachi)", 
+            readings: [
+                {r:"hito", k:"ひと", t:"kun"}, {r:"hito(tsu)", k:"ひと(つ)", t:"kun"}, 
+                {r:"ichi", k:"イチ", t:"on"}, {r:"i-", k:"イッ", t:"on"},
+                {r:"tsuitachi", k:"ついたち", t:"kun"} // Added special date
+            ] 
+        },
+        { 
+            char: "二", 
+            meaning: "Two\nEx: 二月 (Nigatsu), 二日 (Futsuka)", 
+            readings: [
+                {r:"futa", k:"ふた", t:"kun"}, {r:"futa(tsu)", k:"ふた(つ)", t:"kun"}, 
+                {r:"ni", k:"ニ", t:"on"},
+                {r:"futsuka", k:"ふつか", t:"kun"}, // Added special date
+                {r:"futari", k:"ふたり", t:"kun"}   // Added counter (people)
+            ] 
+        },
+        { 
+            char: "三", 
+            meaning: "Three\nEx: 三月 (Sangatsu), 三日 (Mikka)", 
+            readings: [
+                {r:"mi-", k:"みっ", t:"kun"}, {r:"mi(ttsu)", k:"み(っつ)", t:"kun"}, 
+                {r:"san", k:"サン", t:"on"},
+                {r:"mikka", k:"みっか", t:"kun"} // Added special date
+            ] 
+        },
+        { 
+            char: "四", 
+            meaning: "Four\nEx: 四月 (Shigatsu), 四日 (Yokka)", 
+            readings: [
+                {r:"yo", k:"よ", t:"kun"}, {r:"yo-", k:"よっ", t:"kun"}, {r:"yo(ttsu)", k:"よ(っつ)", t:"kun"}, {r:"yon", k:"よん", t:"kun"}, 
+                {r:"shi", k:"シ", t:"on"},
+                {r:"yokka", k:"よっか", t:"kun"} // Added special date
+            ] 
+        },
+        { 
+            char: "五", 
+            meaning: "Five\nEx: 五月 (Gogatsu), 五日 (Itsuka)", 
+            readings: [
+                {r:"itsu", k:"いつ", t:"kun"}, {r:"itsu(tsu)", k:"いつ(つ)", t:"kun"}, 
+                {r:"go", k:"ゴ", t:"on"},
+                {r:"itsuka", k:"いつか", t:"kun"} // Added special date
+            ] 
+        },
+        { 
+            char: "六", 
+            meaning: "Six\nEx: 六月 (Rokugatsu), 六日 (Muika)", 
+            readings: [
+                {r:"mu-", k:"むっ", t:"kun"}, {r:"mu(ttsu)", k:"む(っつ)", t:"kun"}, 
+                {r:"roku", k:"ロク", t:"on"}, {r:"ro-", k:"ロッ", t:"on"},
+                {r:"muika", k:"むいか", t:"kun"} // Added special date
+            ] 
+        },
+        { 
+            char: "七", 
+            meaning: "Seven\nEx: 七月 (Shichigatsu), 七日 (Nanoka)", 
+            readings: [
+                {r:"nana", k:"なな", t:"kun"}, {r:"nana(tsu)", k:"なな(つ)", t:"kun"}, 
+                {r:"shichi", k:"シチ", t:"on"},
+                {r:"nanoka", k:"なのか", t:"kun"} // Added special date
+            ] 
+        },
+        { 
+            char: "八", 
+            meaning: "Eight\nEx: 八月 (Hachigatsu), 八日 (Youka)", 
+            readings: [
+                {r:"ya-", k:"やっ", t:"kun"}, {r:"ya(ttsu)", k:"や(っつ)", t:"kun"}, {r:"you", k:"よう", t:"kun"}, 
+                {r:"hachi", k:"ハチ", t:"on"}, {r:"ha-", k:"ハッ", t:"on"},
+                {r:"youka", k:"ようか", t:"kun"} // Added special date
+            ] 
+        },
+        { 
+            char: "九", 
+            meaning: "Nine\nEx: 九月 (Kugatsu), 九日 (Kokonoka)", 
+            readings: [
+                {r:"kokono", k:"ここの", t:"kun"}, {r:"kokono(tsu)", k:"ここの(つ)", t:"kun"}, 
+                {r:"kyuu", k:"キュウ", t:"on"}, {r:"ku", k:"ク", t:"on"},
+                {r:"kokonoka", k:"ここのか", t:"kun"} // Added special date
+            ] 
+        },
+        { 
+            char: "十", 
+            meaning: "Ten\nEx: 十月 (Juugatsu), 十日 (Tooka)", 
+            readings: [
+                {r:"too", k:"とお", t:"kun"}, 
+                {r:"juu", k:"ジュウ", t:"on"}, {r:"ju-", k:"ジュッ", t:"on"}, {r:"ji-", k:"ジッ", t:"on"},
+                {r:"tooka", k:"とおか", t:"kun"} // Added special date
+            ] 
+        },
 
         // --- Page 1 (No. 41, 42, 43, 44, 45 + top #6) ---
         { char: "父", meaning: "Father", readings: [{r:"chichi", k:"ちち", t:"kun"}, {r:"fu", k:"フ", t:"on"}] },
@@ -343,18 +436,6 @@
         { char: "万", meaning: "Ten thousand", readings: [{r:"man", k:"マン", t:"on"}, {r:"ban", k:"バン", t:"on"}] },
         { char: "円", meaning: "Japanese Yen / Circle", readings: [{r:"en", k:"エン", t:"on"}] },
         { char: "年", meaning: "Year / age", readings: [{r:"toshi", k:"とし", t:"kun"}, {r:"nen", k:"ネン", t:"on"}] },
-
-        // --- Numbers (No. 11-20) with Notebook Examples ---
-        { char: "一", meaning: "one\n(Ex: Jan, 1st day, one day)", readings: [{r:"hito", k:"ひと", t:"kun"}, {r:"hito(tsu)", k:"ひと(つ)", t:"kun"}, {r:"ichi", k:"イチ", t:"on"}, {r:"i-", k:"イッ", t:"on"}] },
-        { char: "二", meaning: "two\n(Ex: Feb, 2nd day, two people)", readings: [{r:"futa", k:"ふた", t:"kun"}, {r:"futa(tsu)", k:"ふた(つ)", t:"kun"}, {r:"ni", k:"ニ", t:"on"}] },
-        { char: "三", meaning: "three\n(Ex: Mar, 3rd day, triangle)", readings: [{r:"mi-", k:"みっ", t:"kun"}, {r:"mi(ttsu)", k:"み(っつ)", t:"kun"}, {r:"san", k:"サン", t:"on"}] },
-        { char: "四", meaning: "four\n(Ex: Apr, 4th day)", readings: [{r:"yo", k:"よ", t:"kun"}, {r:"yo-", k:"よっ", t:"kun"}, {r:"yo(ttsu)", k:"よ(っつ)", t:"kun"}, {r:"yon", k:"よん", t:"kun"}, {r:"shi", k:"シ", t:"on"}] },
-        { char: "五", meaning: "five\n(Ex: May, 5th day, 5 yen)", readings: [{r:"itsu", k:"いつ", t:"kun"}, {r:"itsu(tsu)", k:"いつ(つ)", t:"kun"}, {r:"go", k:"ゴ", t:"on"}] },
-        { char: "六", meaning: "six\n(Ex: Jun, 6th day)", readings: [{r:"mu-", k:"むっ", t:"kun"}, {r:"mu(ttsu)", k:"む(っつ)", t:"kun"}, {r:"roku", k:"ロク", t:"on"}, {r:"ro-", k:"ロッ", t:"on"}] },
-        { char: "七", meaning: "seven\n(Ex: Jul, 7th day)", readings: [{r:"nana", k:"なな", t:"kun"}, {r:"nana(tsu)", k:"なな(つ)", t:"kun"}, {r:"shichi", k:"シチ", t:"on"}] },
-        { char: "八", meaning: "eight\n(Ex: Aug, 8th day)", readings: [{r:"ya-", k:"やっ", t:"kun"}, {r:"ya(ttsu)", k:"や(っつ)", t:"kun"}, {r:"you", k:"よう", t:"kun"}, {r:"hachi", k:"ハチ", t:"on"}, {r:"ha-", k:"ハッ", t:"on"}] },
-        { char: "九", meaning: "nine (things) / September / 9th day", readings: [{r:"kokono", k:"ここの", t:"kun"}, {r:"kokono(tsu)", k:"ここの(つ)", t:"kun"}, {r:"kyuu", k:"キュウ", t:"on"}, {r:"ku", k:"ク", t:"on"}] },
-        { char: "十", meaning: "ten\n(Ex: Oct, 10th day)", readings: [{r:"too", k:"とお", t:"kun"}, {r:"juu", k:"ジュウ", t:"on"}, {r:"ju-", k:"ジュッ", t:"on"}, {r:"ji-", k:"ジッ", t:"on"}] },
         
         // --- Elements (No. 6-10) ---
         { char: "火", meaning: "fire", readings: [{r:"hi", k:"ひ", t:"kun"}, {r:"ka", k:"カ", t:"on"}] },

@@ -264,7 +264,7 @@ const kanjiData = [
         meaning: "Leg", 
         readings: [
             {r: "ashi", k: "あし", t: "kun"}, 
-            {r: "ta(su)", k: "た(す)", t: "kun"}, 
+            {r: "ta(riru)", k: "た(りる)", t: "kun"}
             {r: "soku", k: "ソク", t: "on"}
         ] 
     },
